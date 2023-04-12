@@ -131,13 +131,81 @@
           background-attachment: fixed;
         }
       }
+
+      .loader {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        z-index: 10000;
+        width: 100%;
+        height: 100%;
+        background: #000000;
+        transition: all 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .loader.hide {
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      .loader img {
+        margin-bottom: 25px;
+        width: 150px;
+      }
+
+      .loader p {
+        font-family: "Mukta", sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        color: #ffffff;
+      }
+
+      .loader p.hide {
+        display: none;
+      }
+
+      .loader .enter-btn {
+        font-family: "Rise", sans-serif;
+        background: #ffffff;
+        color: black;
+        padding: 10px 30px;
+        border-radius: 10px;
+        font-size: 20px;
+      }
     </style>
 
     <!-- Title -->
     <title>BUY THE DIP</title>
   </head>
   <body>
+    <!-- Loader -->
+    <div class="loader">
+      <img src="/image/sauce-img.png" alt="" />
+
+      <p>Loading...</p>
+
+      <button class="enter-btn">Enter</button>
+    </div>
+
     <!-- Root -->
     <div id="root"></div>
+
+    <script>
+      // Loader
+      window.addEventListener("load", () => {
+        document.querySelector(".loader .enter-btn").classList.add("show");
+        document.querySelector(".loader p").classList.add("hide");
+      });
+
+      document
+        .querySelector(".loader .enter-btn")
+        .addEventListener("click", () => {
+          document.querySelector(".loader").classList.add("hide");
+        });
+    </script>
   </body>
 </html>
