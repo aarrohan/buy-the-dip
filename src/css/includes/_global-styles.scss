@@ -1,0 +1,55 @@
+// Global styles
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #000000;
+  font-family: $primary-font-family;
+  color: $primary-text-color;
+}
+
+h1,
+h2,
+h3 {
+  font-family: $secondary-font-family;
+}
+
+a {
+  text-decoration: none;
+  color: $primary-text-color;
+}
+
+li {
+  list-style-type: none;
+}
+
+button,
+input,
+textarea,
+select {
+  outline: none;
+  border: none;
+  background: none;
+  font-family: $primary-font-family;
+  color: $primary-text-color;
+}
+
+button,
+select {
+  cursor: pointer;
+}
+
+img {
+  user-select: none;
+}
+
+audio {
+  display: none;
+}

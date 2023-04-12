@@ -1,0 +1,89 @@
+// About Page
+.about-page {
+  width: 100%;
+  height: 100vh;
+  // background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+  //   url("/image/LandingPage_Desktop.gif");
+  // background-size: cover;
+  // background-position: top center;
+  padding: 200px 0 0 0;
+  overflow-x: hidden;
+
+  @media only screen and (max-width: 1280px) {
+    padding: 200px 0 300px 0;
+    // background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    //   url("/image/LandingPage_Mobile.gif");
+    // background-size: cover;
+    // background-attachment: fixed;
+    overflow: scroll;
+  }
+  @media only screen and (max-width: 500px) {
+    padding: 100px 0 10px 0;
+  }
+  .container {
+    .about-con {
+      width: 80%;
+      margin: auto;
+      position: relative;
+      @media only screen and (max-width: 1280px) {
+        width: 100%;
+      }
+      .about {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.35) 0%,
+          rgba(255, 255, 255, 0) 100%
+        );
+        border-radius: 50px;
+        padding: 50px;
+        .sauce-img {
+          margin-top: 35px;
+          max-width: 200px;
+          width: 100%;
+        }
+        p {
+          font-size: 16px;
+          text-transform: uppercase;
+          text-align: center;
+          margin-bottom: 20px;
+          @media only screen and (max-width: 500px) {
+            font-size: 14px;
+          }
+        }
+      }
+      .about-bottole {
+        position: absolute;
+        right: -130px;
+        bottom: -100px;
+        @media only screen and (max-width: 1280px) {
+          right: -85px;
+        }
+
+        @media only screen and (max-width: 1024px) {
+          display: none;
+        }
+        @media only screen and (max-width: 500px) {
+          right: 35%;
+          bottom: -101px;
+          display: none;
+        }
+        img {
+          width: 250px;
+          @media only screen and (max-width: 500px) {
+            width: 100px;
+          }
+        }
+      }
+    }
+    .socials {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 50px;
+      margin-bottom: 30px;
+    }
+  }
+}

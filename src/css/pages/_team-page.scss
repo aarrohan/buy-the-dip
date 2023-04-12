@@ -1,0 +1,88 @@
+// Team page
+.team-page {
+  width: 100%;
+  height: 100vh;
+  // background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+  //   url("/image/LandingPage_Desktop.gif");
+  // background-size: cover;
+  // background-position: top center;
+  padding: 400px 0 0 0;
+  overflow-x: hidden;
+
+  @media only screen and (max-width: 1280px) {
+    padding: 300px 0 0 0;
+    // background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    //   url("/image/LandingPage_Mobile.gif");
+    // background-size: cover;
+    // background-attachment: fixed;
+  }
+
+  .team-section {
+    .container {
+      .team-member {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @media only screen and (max-width: 1280px) {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+        .member {
+          width: 400px;
+          background: linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.35) 0%,
+            rgba(255, 255, 255, 0) 100%
+          );
+          border-radius: 50px;
+          padding: 88px 30px 40px 30px;
+          position: relative;
+          @media only screen and (max-width: 1280px) {
+            width: 350px;
+            padding: 88px 20px 40px 20px;
+            margin-bottom: 200px;
+          }
+          .member-info {
+            h2 {
+              text-align: center;
+              font-size: 30px;
+              margin-bottom: 10px;
+            }
+            p {
+              text-align: center;
+              font-size: 18px;
+              @media only screen and (max-width: 1280px) {
+                font-size: 16px;
+              }
+            }
+          }
+          .bottol {
+            position: absolute;
+            left: 100px;
+            top: -210px;
+            @media only screen and (max-width: 1280px) {
+              position: absolute;
+              left: 93px;
+              top: -180px;
+            }
+            img {
+              width: 200px;
+              @media only screen and (max-width: 1280px) {
+                width: 170px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .socials {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 50px;
+      margin-bottom: 30px;
+    }
+  }
+}

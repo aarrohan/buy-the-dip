@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+// Dependencies
+import { Routes, Route } from "react-router-dom";
 
-function App() {
+// Components
+import NavigationBarComponent from "./components/NavigationBarComponent";
+
+// Pages
+import LandingPage from "./pages/LandingPage";
+import TeamPage from "./pages/TeamPage";
+import AboutPage from "./pages/AboutPage";
+import RoadmapPage from "./pages/RoadmapPage";
+
+// App
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <>
+      {/* Navigation bar component */}
+      <NavigationBarComponent />
 
+      {/* Routes */}
+      <Routes>
+        {/* Landing page */}
+        <Route path="/" element={<LandingPage />} />
+
+        {/* Team page */}
+        <Route path="/team" element={<TeamPage />} />
+
+        {/* About page */}
+        <Route path="/about" element={<AboutPage />} />
+
+        {/* Roadmap page */}
+        <Route path="/roadmap" element={<RoadmapPage />} />
+      </Routes>
+    </>
+  );
+};
+
+// Export
 export default App;

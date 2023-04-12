@@ -1,0 +1,13 @@
+// Includes
+@import "./includes/variables";
+@import "./includes/global-styles";
+@import "./includes/custom-classes";
+
+// Components
+@import "./components/navigation-bar-component";
+
+// Pages
+@import "./pages/landing-page";
+@import "./pages/team-page";
+@import "./pages/about-page";
+@import "./pages/roadmap-page";
