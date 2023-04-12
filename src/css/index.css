@@ -449,8 +449,8 @@ audio {
 }
 .roadmap-page .container .roadmap-con {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 50px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
 }
 @media only screen and (max-width: 1280px) {
   .roadmap-page .container .roadmap-con {
@@ -465,6 +465,7 @@ audio {
   padding: 30px;
 }
 .roadmap-page .container .roadmap-con .roadmap-box h2 {
+  font-size: 30px;
   text-align: center;
   margin-bottom: 30px;
 }
@@ -472,11 +473,15 @@ audio {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0));
   border: 2px solid #ffffff;
   border-radius: 15px;
-  padding: 10px;
+  padding: 15px;
   margin-bottom: 10px;
+  cursor: pointer;
+}
+.roadmap-page .container .roadmap-con .roadmap-box .option-1.active {
+  background: linear-gradient(90deg, rgb(255, 255, 255), rgba(255, 255, 255, 0));
 }
 .roadmap-page .container .roadmap-con .roadmap-box .option-1 p {
   font-weight: 600;

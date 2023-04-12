@@ -1,42 +1,52 @@
 // Roadmap page
-const RoadmapPage = () => {
+const RoadmapPage = ({
+  walletConnected,
+  connectWallet,
+  vote,
+  roadmapBoxes,
+}) => {
   return (
     <main className="roadmap-page">
       <div className="container">
         <div className="roadmap-con">
-          <div className="roadmap-box">
-            <h2>Title Here</h2>
+          {roadmapBoxes.map((roadmapBox) => {
+            return (
+              <div key={roadmapBox.uid} className="roadmap-box">
+                <h2>{roadmapBox.title}</h2>
 
-            <div className="option-1">
-              <p>OPTION 1</p>
-              <span>56% VOTED</span>
-            </div>
+                {roadmapBox.options.map((option) => {
+                  return (
+                    <div
+                      key={option.uid}
+                      onClick={() => {
+                        vote(roadmapBox, option);
+                      }}
+                      className={
+                        option.voted && option.voted === true
+                          ? "option-1 active"
+                          : "option-1"
+                      }
+                    >
+                      <p>{option.title}</p>
+                      <span>{option.voted_percent}% VOTED</span>
+                    </div>
+                  );
+                })}
+              </div>
+            );
+          })}
+        </div>
 
-            <div className="option-1">
-              <p>OPTION 2</p>
-              <span>4% VOTED</span>
-            </div>
-
-            <div className="option-1">
-              <p>OPTION 3</p>
-              <span>40% VOTED</span>
-            </div>
-
-            <div className="option-1">
-              <p>OPTION 4</p>
-              <span>0% VOTED</span>
-            </div>
-
-            <div className="option-1">
-              <p>OPTION 5</p>
-              <span>0% VOTED</span>
-            </div>
+        {!walletConnected ? (
+          <div
+            onClick={() => {
+              connectWallet();
+            }}
+            className="connect-btn"
+          >
+            <button>CONNECT WALLET TO VOTE</button>
           </div>
-        </div>
-
-        <div className="connect-btn">
-          <button>CONNECT WALLET TO VOTE</button>
-        </div>
+        ) : null}
 
         <div className="socials">
           <a href="" target="_blank">
