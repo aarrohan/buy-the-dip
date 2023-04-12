@@ -44,7 +44,7 @@ const Team = () => {
           </div>
 
           <div className="socials">
-            <a href="" target="_blank">
+            <a href="https://twitter.com/GetTheDip" target="_blank">
               <svg
                 width="20"
                 height="16"

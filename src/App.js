@@ -719,7 +719,7 @@ const App = () => {
       );
 
       contract.methods
-        .balanceOf("0x0b4adcb032262d2010f0b69df9cd0c6d79cfa69c")
+        .balanceOf(account)
         .call()
         .then((res) => {
           if (parseInt(res) > 0) {

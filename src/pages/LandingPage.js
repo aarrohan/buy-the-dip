@@ -6,7 +6,7 @@ const LandingPage = () => {
       <section className="hero-section">
         <div className="socials">
           <div className="socials-icon">
-            <a href="" target="_blank">
+            <a href="https://twitter.com/GetTheDip" target="_blank">
               <svg
                 width="20"
                 height="16"
