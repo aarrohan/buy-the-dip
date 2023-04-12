@@ -32,7 +32,7 @@
     <style>
       @font-face {
         font-family: "Rise";
-        src: url("/fonts/Rise.woff") format("woff");
+        src: url("/fonts/rise.woff") format("woff");
         font-weight: normal;
         font-style: normal;
         font-display: swap;
@@ -158,14 +158,78 @@
       }
 
       .loader p {
+        display: flex;
         font-family: "Rise", sans-serif;
-        font-size: 22px;
+        font-size: 24px;
         font-weight: 500;
         color: #ffffff;
       }
 
       .loader p.hide {
         display: none;
+      }
+
+      .loader p .dot-1 {
+        margin-left: 5px;
+        display: flex;
+        animation: dot1 1s ease-in infinite;
+      }
+
+      @keyframes dot1 {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+        75% {
+          transform: translateY(0px);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+
+      .loader p .dot-2 {
+        margin-left: 5px;
+        display: flex;
+        animation: dot2 1.1s ease-in infinite;
+      }
+
+      @keyframes dot2 {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+        75% {
+          transform: translateY(0px);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+
+      .loader p .dot-3 {
+        margin-left: 5px;
+        display: flex;
+        animation: dot3 1.2s ease-in infinite;
+      }
+
+      @keyframes dot3 {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+        75% {
+          transform: translateY(0px);
+        }
+        100% {
+          transform: translateY(0);
+        }
       }
 
       .loader .enter-btn {
@@ -191,7 +255,10 @@
     <div class="loader">
       <img src="/image/sauce-img.png" alt="" />
 
-      <p>Loading...</p>
+      <p>
+        Loading<span class="dot-1">.</span><span class="dot-2">.</span
+        ><span class="dot-3">.</span>
+      </p>
 
       <button class="enter-btn">Enter</button>
     </div>

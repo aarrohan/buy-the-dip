@@ -21,6 +21,12 @@
     padding: 120px 0 0 0;
   }
   .container {
+    h2 {
+      margin-bottom: 50px;
+      font-size: 40px;
+      text-align: center;
+    }
+
     .roadmap-con {
       display: grid;
       grid-template-columns: repeat(2, 1fr);

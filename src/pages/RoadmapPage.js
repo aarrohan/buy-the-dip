@@ -8,6 +8,8 @@ const RoadmapPage = ({
   return (
     <main className="roadmap-page">
       <div className="container">
+        <h2>Interactive Roadmap</h2>
+
         <div className="roadmap-con">
           {roadmapBoxes.map((roadmapBox) => {
             return (
