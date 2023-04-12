@@ -250,7 +250,8 @@ audio {
 }
 .landing-page .hero-section .socials {
   width: 100%;
-  position: absolute;
+  position: fixed;
+  z-index: 3;
   bottom: 10px;
   left: 0;
 }
